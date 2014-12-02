@@ -1,42 +1,63 @@
 <!Doctype html>
-
-<html>
-
+<htmltata>
 	<head>
-
 		<title>Exos javascript</title>
 		<meta charset="utf-8"/>
-	
 	</head>
 
 	<body>
-
 		<script>
-
+		/*
+			Dans une classe moyenne a webforce il y a environ 15 etudiants
+chaque etudiant est habitué a un nombre d'heure de sommeil tournant autour de 8 heures par nuit
+apres 3 semaine a webforce ils leur reste que deux tiers de cette capacité a dormir par soir
+a la fin de la formation ils n'ont plus que 2 heures de sommeil par jour 
+ils ont tous une recuperation de temps de sommeil de +/- 10% par semaine.
+logguez pour chaque etudiant le temps qu'ils auront besoin pour cicatriser de webforce
+		*/
 			var sommeilInit = 8;
-
 			var sommeilFin = 2;
-
 			var sommeilPerdu = sommeilInit - sommeilFin;
 
 			for (i = 0; i < 15; i++)
 			{
 				var percentage = ((Math.random() * 0.1) + 0.05);
-
 				var recuperation = sommeilPerdu * percentage;
-
 				var tempsRecup = sommeilPerdu / recuperation;
-
-				//var tempsRecup = tempsRecup.toPrecision(2);
-
 				console.log(tempsRecup + " semaines");
 			}
 
+			// modification
 
+			//----------------------------------
+			var normalSleep = 8;
+			var leftSleep = 2;
+			var counter = 0;
+
+			function restaure()
+			{
+				while(leftSleep < normalSleep)
+				{
+					var add = leftSleep * 10/100;
+					leftSleep += add;
+					console.log(leftSleep);
+					counter += 1;
+
+				}
+
+				return counter;
+
+			}
+
+	
+			var weekNumber = restaure();
+
+			console.log(weekNumber);
 		</script>
 
 
-		<!------------------------------------------------------------->
+
+		
 
 			<script type="text/javascript">
 	var dodowf3 = 2;
@@ -55,4 +76,6 @@
 
 	</body>
 
+
+	</body>
 </html>
