@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+<head> </head>
+<body>
+
+<script>
+// ci dessous l'exo demandé. attaquer.
+
+//exercice 1
+// un élève force3 dort 8h/nuit en début de formation. à la fin il ne dort plus que 2h/nuit. sachant qu'il récupère 10% de sommeil chaque semaine, combien de semaines lui faudra-t-il pour récupérer ? réponse : 3.
+
+var tempsdesommeil = 2; //à la fin de la formation mes étudiants ne dorment plus que 2h/nuit
+
+function recuperation ()
+{
+	
+	nbresemaine=1;
+	while (tempsdesommeil<=8) // tant que leur temps de sommeil n'est pas revenu à 8h/nuit
+	{
+			
+			tempsdesommeil = tempsdesommeil*(1+1.1); // sachant qu'il augmente de 10% chaque semaine
+			nbresemaine++; // on ajoute une semaine
+
+	}
+
+return nbresemaine;
+
+}
+
+
+
+
+			var sommeilInit = 8;
+
+			var sommeilFin = 2;
+
+			var sommeilPerdu = sommeilInit - sommeilFin;
+
+			for (i = 0; i < 15; i++)
+			{
+				var percentage = ((Math.random() * 0.1) + 0.05);
+
+				var recuperation = sommeilPerdu * percentage;
+
+				var tempsRecup = sommeilPerdu / recuperation;
+
+				//var tempsRecup = tempsRecup.toPrecision(2);
+
+				console.log(tempsRecup + " semaines");
+			}
+
+				//obtient 15 résultats de 6 à 17 semaines
+		
+		</script>
+
+
+</script>
+</body>
+</html>
